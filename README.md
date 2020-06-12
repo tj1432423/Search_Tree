@@ -1,6 +1,6 @@
-# Binary_Search_Tree
+# Search_Tree
 
-Created by Daike Kang for the practice of binary search tree algorithm.
+Created by Daike Kang for the practice of search tree algorithm, like BST, BBST and B- Tree etc.
 
 It is still under continuous improvement.
 
