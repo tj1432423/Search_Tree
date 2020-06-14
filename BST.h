@@ -119,6 +119,13 @@ protected:
         else return _node->left->height-_node->right->height;
     }
 
+    TNode<VALUE_TYPE>* getmin(TNode<VALUE_TYPE>* _a){
+        if(_a && _a->left)
+            return getmin(_a->left);
+        else
+            return _a;
+    }
+
     int node_num;
 
     TNode<VALUE_TYPE>* root;
@@ -187,12 +194,7 @@ private:
         return res_parent;
     }
 
-    TNode<VALUE_TYPE>* getmin(TNode<VALUE_TYPE>* _a){
-        if(_a && _a->left)
-            return getmin(_a->left);
-        else
-            return _a;
-    }
+
 
     void postorder_traversal (TNode<VALUE_TYPE>* _root){
         if(_root==nullptr) return;
