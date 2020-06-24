@@ -2,6 +2,7 @@
 //#include "BST.h"
 #include "AVL.h"
 #include "Splay_Tree.h"
+#include "Red_Black_Tree.h"
 
 //using namespace std;
 template<class TREE_TYPE>
@@ -62,6 +63,14 @@ int main(){
     cout<<"size="<<splay_tree.size()<<"   "<<"height="<<splay_tree.height()<<endl;
     SearchNodetest<SPLAY_TREE<float>>(splay_tree); // 测试构建Splay树
     delNodetest<SPLAY_TREE<float>>(splay_tree);    // 测试删除Splay树节点
+
+    cout<<"-----------Red Black Tree-------------"<<endl;
+
+    RED_BLACK_TREE<int> rb_tree;
+    insertNodetest<RED_BLACK_TREE<int>>(rb_tree); // 测试构建red_black树
+    cout<<"size="<<rb_tree.size()<<"   "<<"height="<<rb_tree.height()<<endl;
+    SearchNodetest<RED_BLACK_TREE<int>>(rb_tree); // 测试构建red_black树
+    delNodetest<RED_BLACK_TREE<int>>(rb_tree);    // 测试删除red_black树节点
 
     return 0;
 }

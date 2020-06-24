@@ -10,12 +10,14 @@ using namespace std;
 template<class VALUE_TYPE>
 class TNode{
 public:
-    TNode():height(1),left(nullptr),right(nullptr),parent(nullptr){}
+    enum Color {RED, BLACK}; // 定义Node颜色枚举类型--Red Black Tree
+    TNode():height(1),left(nullptr),right(nullptr),parent(nullptr),color(RED){}
     VALUE_TYPE value;
     int height;
     TNode* left;
     TNode* right;
     TNode* parent;
+    Color color;
 };
 
 template<class VALUE_TYPE> class BST{
